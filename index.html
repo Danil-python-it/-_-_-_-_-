@@ -12,12 +12,14 @@
     <header class="header">
         <div class="container">
             <img src="images/headers/logo.svg" alt="header">
-            <ul class="nav-header">
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Галерея</a></li>
-                <li><a href="#">О лаборатории</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
+            <div class="ctn_nav_header">
+                <ul class="nav-header">
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Галерея</a></li>
+                    <li><a href="#">О лаборатории</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
             <ul class="links">
                 <li><a href="#"><i class="fas fa-search"></i></a></li>
                 <li><a href="#"><i class='fas fa-right-to-bracket'></i></a></li>
@@ -45,7 +47,7 @@
             </div>
         </section>
         <selection class="ctn_slide">
-            <div class="show_slide_items">
+            <div class="show_slide_items" id="SlideCont">
                 <div class="ctn_slide_item">
                     <div class="view_window">
                         <img src="./images/slide_section/Layer 1.png" alt="">
@@ -124,15 +126,15 @@
                 </div>
             </div>
             <div class="Ui_slide">
-                <div class="right-arrow">
+                <a class="right-arrow" id="press">
                     <div></div>
-                </div>
-                <span class="indication">
-                    1 из 4
+                </a>
+                <span class="indication" id="num_item">
+                    
                 </span>
-                <div class="left-arrow">
+                <a class="left-arrow" id="next">
                     <div></div>
-                </div>
+                </a>
             </div>
         </selection>
         <section class="ctn_new_art">
@@ -140,7 +142,10 @@
                 Новые артефакты
             </div>
             <div class="art_info">
-                <img src="./images/new_art_section/card_5.png" alt="">
+                <div class="ctn_img">
+                    <div class="img" id="art"></div>
+                    <span class="art-hint">Swipe to see more<span class="left-arrow"><div></div></span></span>
+                </div>
                 <div class="Text_Window">
                     <div class="MiniTitel">
                         Kurische Nehrung 24
@@ -188,5 +193,6 @@
             f&b ® 2020
         </div>
     </footer>
+    <script src="./script/SlideLogical.js"></script>
 </body>
 </html>
